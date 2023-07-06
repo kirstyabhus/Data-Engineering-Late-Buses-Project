@@ -11,9 +11,9 @@ tags: []
 parameters: {}
 schedule:
   interval: 30.0
-  anchor_date: '2023-07-05T22:42:30.024840+00:00'
-  timezone: Europe/London
-is_schedule_active: false
+  anchor_date: '2023-07-06T19:44:24.985297+00:00'
+  timezone: UTC
+is_schedule_active: null
 infra_overrides: {}
 infrastructure:
   type: process
@@ -32,7 +32,7 @@ infrastructure:
 flow_name: main-flow
 manifest_path: null
 storage: null
-path: C:\Users\kabhu\data-engineering-project
+path: C:\Users\kabhu\data-engineering-late-buses-project
 entrypoint: ETL\bus_master_flow.py:main_flow
 parameter_openapi_schema:
   title: Parameters
@@ -40,5 +40,5 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2023-07-05T22:42:30.024840+00:00'
+timestamp: '2023-07-06T19:44:24.985297+00:00'
 triggers: []
