@@ -17,7 +17,6 @@ from prefect.blocks.system import Secret
 
 secret_block = Secret.load("bods-api-key")
 bods_api_key = secret_block.get()
-# bods_api_key = "77aa4569f3bb0556420c81f004532259359d93a6"
 
 
 @task(log_prints=True, retries=3)
