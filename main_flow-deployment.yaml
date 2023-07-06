@@ -1,0 +1,44 @@
+###
+### A complete description of a Prefect Deployment for flow 'main-flow'
+###
+name: prefect-master-flow-deployment
+description: null
+version: 982f18eb969520460e3303919beb9430
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule:
+  interval: 30.0
+  anchor_date: '2023-07-05T22:42:30.024840+00:00'
+  timezone: Europe/London
+is_schedule_active: false
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: main-flow
+manifest_path: null
+storage: null
+path: C:\Users\kabhu\data-engineering-project
+entrypoint: ETL\bus_master_flow.py:main_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-07-05T22:42:30.024840+00:00'
+triggers: []

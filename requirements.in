@@ -1,0 +1,9 @@
+pandas==2.0.0
+pytz==2023.3
+prefect==2.10.18
+prefect_gcp==0.4.4
+requests==2.31.0
+gtfs_kit==5.2.7
+numpy==1.24.2
+pathlib==1.0.1
+google-cloud-bigquery==3.11.3
