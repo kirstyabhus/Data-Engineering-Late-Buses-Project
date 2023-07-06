@@ -95,10 +95,10 @@ def load_live_locations_to_gcs(
 @flow()
 def get_live_bus_locations(
     area_coords: dict = {
-        "min_lat": 53.725,
-        "max_lat": 53.938,
-        "min_long": -1.712,
-        "max_long": -1.296,
+        "min_lat": 51.3849,
+        "max_lat": 51.6727,
+        "min_long": -0.3510,
+        "max_long": 0.1482,
     },
     pref_gcs_block_name: str = "bus-tracker-gcs-bucket",
     live_locations_filename: str = "live_location",
