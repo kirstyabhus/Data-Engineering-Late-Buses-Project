@@ -1,38 +1,63 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'main-flow'
 ###
-name: prefect-master-flow-deployment
+name: master__flow
 description: null
 version: 982f18eb969520460e3303919beb9430
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-work_pool_name: default-agent-pool
+work_pool_name: null
 tags: []
 parameters: {}
-schedule:
-  interval: 30.0
-  anchor_date: '2023-07-06T19:44:24.985297+00:00'
-  timezone: UTC
+schedule: null
 is_schedule_active: null
 infra_overrides: {}
-infrastructure:
-  type: process
-  env: {}
-  labels: {}
-  name: null
-  command: null
-  stream_output: true
-  working_dir: null
-  block_type_slug: process
-  _block_type_slug: process
 
 ###
 ### DO NOT EDIT BELOW THIS LINE
 ###
 flow_name: main-flow
 manifest_path: null
-storage: null
-path: C:\Users\kabhu\data-engineering-late-buses-project
+infrastructure:
+  type: cloud-run-job
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  image: europe-west6-docker.pkg.dev/bus-project-390317/bus-tracking/bus-tracker:v1
+  region: europe-west6
+  credentials:
+    service_account_file: C:\Users\kabhu\OneDrive\Desktop\Files\DE-bus-project\Service-account-key-JSON\bus-project-390317-a9dc41be01bc.json
+    service_account_info: null
+    project: bus-project-390317
+    _service_account_email: bus-413@bus-project-390317.iam.gserviceaccount.com
+    _block_document_id: 2900757d-b363-456c-b828-95bd08a6e180
+    _block_document_name: bus-tracker-gcs-creds
+    _is_anonymous: false
+    block_type_slug: gcp-credentials
+  cpu: null
+  memory: null
+  memory_unit: null
+  vpc_connector_name: null
+  args: null
+  keep_job: false
+  timeout: 600
+  _block_document_id: a08f3ae9-9ce4-4198-966c-b88330c1b976
+  _block_document_name: bus-tracker-cloudrun
+  _is_anonymous: false
+  block_type_slug: cloud-run-job
+  _block_type_slug: cloud-run-job
+storage:
+  repository: https://github.com/kirstyabhus/Data-Engineering-Late-Buses-Project.git
+  reference: null
+  access_token: null
+  include_git_objects: true
+  _block_document_id: dbe0acf5-0674-4248-a1a8-8f5c69f400a4
+  _block_document_name: bus-tracker
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
 entrypoint: ETL\bus_master_flow.py:main_flow
 parameter_openapi_schema:
   title: Parameters
@@ -40,5 +65,5 @@ parameter_openapi_schema:
   properties: {}
   required: null
   definitions: null
-timestamp: '2023-07-06T19:44:24.985297+00:00'
+timestamp: '2023-07-06T20:17:59.539238+00:00'
 triggers: []
