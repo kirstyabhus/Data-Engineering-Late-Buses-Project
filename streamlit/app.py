@@ -86,8 +86,9 @@ def refresh_map():
     st.subheader(
         f"Number of buses currently more than 10 minutes late: {number_of_late_buses}",
     )
-    st.subheader(f"x")
-    st.write(f"x")
+    st.write(
+        f"[Project GitHub](https://github.com/kirstyabhus/Data-Engineering-Late-Buses-Project) | [Source data](https://data.bus-data.dft.gov.uk/) "
+    )
     st.text(f"Click refresh below to update")
 
     st_data = st_folium(m, width=725, returned_objects=[])
