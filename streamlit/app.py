@@ -11,7 +11,7 @@ from io import StringIO
 def refresh_map():
     """Refreshes all app data"""
 
-    now = datetime.now.strftime("%Y-%m-%d %H:%M:%S")
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
     # Create API client for gcs bucket
     credentials = service_account.Credentials.from_service_account_info(
