@@ -1,6 +1,6 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'get-bus-timetables'
-###
+### 
 name: prefect-bus-timetables-deployment
 description: null
 version: db705cd8187d56d7cabf7eb8dbc7f0e9
@@ -13,7 +13,7 @@ schedule:
   cron: 1 0 * * *
   timezone: UTC
   day_or: true
-is_schedule_active: false
+is_schedule_active: true
 infra_overrides: {}
 infrastructure:
   type: process
